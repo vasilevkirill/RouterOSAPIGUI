@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RouterOS API GUI</title>
+        <link rel="stylesheet" href="/static/bulma.min.css"/>
+        <link rel="stylesheet" href="/static/json-viewer.css"/>
+        <script src="/static/jquery-3.4.1.min.js"></script>
+        <script src="/static/json-viewer.js"></script>
+    </head>
+<body>
+<div class="columns is-fullheight">
+    <div class="column is-3 is-sidebar-menu">
+        <aside class="menu">
+            <form class="menu-label notification" id="connectinfo">
+                <div class="field">
+                    <input name="Address" class="input" type="text" placeholder="IP or DNS Name RouterOS Devices" required value="192.168.88.1">
+                    <p class="help">Example 172.20.17.1</p>
+                </div>
+                <div class="field"><input name="Username" class="input" type="text" placeholder="Login" required value="admin"></div>
+                <div class="field"><input name="Password" class="input" type="password" placeholder="Password" required ></div>
+                <div class="field"><input name="PortApi" class="input" type="number" placeholder="Port Api" required value="8728"></div>
+                <!--<div class="field"><label class="checkbox"><input name="ssl" type="checkbox">Use SSL</label></div>-->
+                <div class="field">
+                    <p class="help">Show Debug</p>
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" value="1" name="debug">Yes
+                        </label>
+                        <label class="radio">
+                            <input type="radio" value="0" name="debug" checked="checked">No
+                        </label>
+                    </div>
+                </div>
+
+        </aside>
+    </div>
+    <div class="column is-main-content">
+        <div class="container is-fluid notification">
+            <p class="help">Insert Command</p>
+            <div class="field has-addons">
+                <p class="control is-expanded">
+                    <input id="commandsend" name="command" class="input" type="text" placeholder="/ip/route/print" value="/ip/route/print"/></p>
+            </div>
+            <p class="help">Insert Argument, each argument in new line</p>
+            <div class="field has-addons">
+                <p class="control is-expanded">
+<textarea id="argumets" name="argumets" class="textarea" rows="5"  placeholder="?static=true">?static=true
+?disabled=true</textarea></p>
+                <p class="control">
+                    <a id="sendaction" class="button is-loader">Send</a>
+                </p>
+            </div>
+        </div>
+    <div>
+        <div id="json" ></div>
+    </div>
+    </div>
+    </form>
+</div>
+<footer class="footer">
+    <div class="content has-text-centered">
+        <p>
+            <strong>RouterOSAPIGUI</strong> by <a href="https://mikrotik.me/vasilevkirill.html" target="_blank">Vasilev Kirill</a>
+        </p>
+    </div>
+</footer>
+<script type="application/javascript">
+    var jsonObj = {};
+    var jsonViewer = new JSONViewer();
+    document.querySelector("#json").appendChild(jsonViewer.getContainer());
+    $("#sendaction").click(function(){
+        Run();
+    });
+    function Run(){
+        var device = $("#connectinfo").serialize();
+        var command = $("#commandsend").val();
+        var args = $("#argumets").val();
+        $("#sendaction").addClass("is-loader");
+        $.ajax({
+            url:"/send",
+            type:"POST",
+            data:device +"&cmd=" + command + "&сargs=" + args,
+            timeout:3000
+        }).done(function( data ){
+            var setJSON = function() {
+                try {
+                    jsonObj = JSON.parse(data);
+                }
+                catch (err) {
+                    alert(err);
+                }
+            };
+            //$("#result").val(JSON.stringify(data))
+            setJSON();
+            jsonViewer.showJSON(jsonObj);
+        });
+        $("#sendaction").removeClass("is-loader");
+    }
+</script>
+</body>
+</html>
