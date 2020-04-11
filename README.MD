@@ -27,7 +27,7 @@ Open in web browser url http://localhost:8081/
 
 <img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_1.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
 
-Entered parameter for connected you Router
+Entered parameter for connected in your Router
 
 <img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_2.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
 
