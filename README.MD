@@ -25,25 +25,25 @@ chmod +x RouterOSAPIGUI_darwin_amd64
 
 Open in web browser url http://localhost:8081/
 
-<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPUGUI_1.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="600"></a>
+<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_1.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
 
 Entered parameter for connected you Router
 
-<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPUGUI_2.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="600"></a>
+<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_2.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
 
 Entered command for testing API
 
-<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPUGUI_3.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="600"></a>
+<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_3.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
 
 If needed use arguments for command, added one argument in new line
 
-<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPUGUI_4.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="600"></a>
+<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_4.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
 
 Sending to API and explore the output in the format JSON
 
-<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPUGUI_5.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="600"></a>
+<img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_5.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
+
 
 #Profit
-
 
 Read more info https://mikrotik.me/blog-RouterOS-API-GUI.html
