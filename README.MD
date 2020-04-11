@@ -1,8 +1,8 @@
 
 
-# [RouterOS API GUI](https://bulma.io)
+# [RouterOS API GUI](https://mikrotik.me)
 
-This simple GUI client for testing API in RuterOS
+This simple GUI client for testing API in RouterOS
 
 ## Quick install
 
@@ -21,7 +21,7 @@ chmod +x RouterOSAPIGUI_darwin_amd64
 ./RouterOSAPIGUI_darwin_amd64
 ```
 
-##Quick Usage
+## Quick Usage
 
 Open in web browser url http://localhost:8081/
 
@@ -44,6 +44,6 @@ Sending to API and explore the output in the format JSON
 <img src="https://raw.githubusercontent.com/vasilevkirill/RouterOSAPIGUI/master/MD/RouterOSAPIGUI_5.png" alt="RouterOS API Simple GUI vasilevkirill" style="max-width:100%;" width="800"></a>
 
 
-#Profit
+# Profit
 
 Read more info https://mikrotik.me/blog-RouterOS-API-GUI.html
