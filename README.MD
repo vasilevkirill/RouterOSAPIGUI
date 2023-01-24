@@ -1,6 +1,6 @@
 
 
-# [RouterOS API GUI](https://mikrotik.me)
+# [RouterOS API GUI](https://vasilevkirill.ru/articles/routerosapigui/)
 
 This simple GUI client for testing API in RouterOS
 
@@ -46,4 +46,4 @@ Sending to API and explore the output in the format JSON
 
 # Profit
 
-Read more info https://mikrotik.me/blog-RouterOS-API-GUI.html
+Read more info https://vasilevkirill.ru/articles/routerosapigui/
